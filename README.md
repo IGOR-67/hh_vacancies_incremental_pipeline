@@ -121,6 +121,15 @@ task1_fetch_yesterday_vacancy_ids │ ▼ task2_fetch_full_vacancy_payloads │ 
 ├── logs/                               # Логи выполнения задач Airflow
 └── plugins/                            # Плагины Airflow (при наличии)
 ```
+## 6. Окружение (.env)
+
+### 6.1 Назначение переменных
+
+Файл .env содержит три группы переменных:
+
+1. Учётные данные базы данных метаданных Airflow (airflow-db) — используются сервисами airflow-init, airflow-webserver, airflow-scheduler.
+2. Строка подключения Airflow к собственной БД (SQL_ALCHEMY_CONN) — передаётся в конфигурацию Airflow.
+3. Параметры подключения DAG-скриптов к рабочей БД проекта (hh-db) — используются модулем dags/hh/db/connect.py.
 ### 6.2 Пример файла .env
 
 ```
