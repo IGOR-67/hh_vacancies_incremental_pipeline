@@ -1,0 +1,1 @@
+TRUNCATE TABLE staging.hh_vacancy_ids;
